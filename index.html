@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel Fabrik | Jewelries & Accessories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Announcement bar -->
+
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html#home" class="active">Home</a>
+      <a href="shop.html#shop">Shop</a>
+      <a href="collections.html" id="collectionsLink">Collections</a>
+    </nav>
+
+    <a href="index.html#hero" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 60 60" width="46" height="46">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="30" y="39" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="26" fill="currentColor">EF</text>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>EXCEL <em>FABRIK</em></strong>
+        <small>— Jewelries &amp; Accessories —</small>
+      </span>
+    </a>
+
+    <nav class="main-nav main-nav-right">
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-icons">
+      <button aria-label="Search" id="searchBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button aria-label="Account">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      </button>
+      <button aria-label="Cart" id="cartBtn" class="cart-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-slides" id="heroSlides">
+
+    <div class="hero-slide active">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Premium Jewelries &amp; Accessories</p>
+        <h1>Timeless<br>Elegance</h1>
+        <p class="hero-desc">Beautifully crafted jewelry and accessories designed to elevate your style, for every moment and every you.</p>
+        <a href="#top-picks" class="btn btn-primary">Shop Collection <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img src="neckleace/16.jpeg" alt="Timeless Elegance" width="520" height="420">
+      </div>
+    </div>
+
+    <div class="hero-slide">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">New In</p>
+        <h1>Golden<br>Hour</h1>
+        <p class="hero-desc">Fresh drops in 18k gold-plated finishes — clover motifs, screw bangles and halo rings, made to layer.</p>
+        <a href="#top-picks" class="btn btn-primary">View New Arrivals <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img src="bango/1.jpeg" alt="Golden Hour" width="520" height="420">
+      </div>
+    </div>
+
+    <div class="hero-slide">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Complete the Look</p>
+        <h1>Beyond<br>Jewelry</h1>
+        <p class="hero-desc">Bags, sunglasses and finishing pieces curated to pair effortlessly with your favourite sets.</p>
+        <a href="#category" class="btn btn-primary">Explore Accessories <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img src="rings/1.jpeg" alt="Accessories" width="520" height="420">
+      </div>
+    </div>
+
+  </div>
+
+  <button class="hero-arrow hero-arrow-left" id="heroPrev" aria-label="Previous slide">‹</button>
+  <button class="hero-arrow hero-arrow-right" id="heroNext" aria-label="Next slide">›</button>
+
+  <div class="hero-dots" id="heroDots">
+    <button class="active" data-slide="0" aria-label="Slide 1"></button>
+    <button data-slide="1" aria-label="Slide 2"></button>
+    <button data-slide="2" aria-label="Slide 3"></button>
+  </div>
+</section>
+
+<!-- Category grid -->
+<section class="category-grid" id="category">
+  <a href="#top-picks" class="cat-card">
+    <div class="cat-thumb cat-necklace">
+      <img src="neckleace/16.jpeg" alt="Necklaces" width="120" height="120">
+    </div>
+    <p>Necklaces <span>→</span></p>
+  </a>
+  <a href="#top-picks" class="cat-card">
+    <div class="cat-thumb cat-bracelet">
+      <img src="bango/1.jpeg" alt="Bracelets" width="120" height="120">
+    </div>
+    <p>Bracelets <span>→</span></p>
+  </a>
+  <a href="#shop.html" class="cat-card">
+    <div class="cat-thumb cat-ring">
+      <img src="rings/1.jpeg" alt="Rings" width="120" height="120">
+    </div>
+    <p>Rings <span>→</span></p>
+  </a>
+  <a href="#top-picks" class="cat-card">
+    <div class="cat-thumb cat-earring">
+      <img src="earrings/1.jpeg" alt="Earrings" width="120" height="120">
+    </div>
+    <p>Earrings <span>→</span></p>
+  </a>
+  <a href="#top-picks" class="cat-card">
+    <div class="cat-thumb cat-bag">
+      <img src="native/23.jpeg" alt="Accessories" width="120" height="120">
+    </div>
+    <p>Accessories <span>→</span></p>
+  </a>
+</section>
+
+<!-- Top Picks -->
+<section class="top-picks" id="top-picks">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow-line">— Featured Collection</p>
+      <h2>Our Top Picks</h2>
+    </div>
+    <a href="collections.html" class="view-all">View All Collections <span>→</span></a>
+  </div>
+
+  <div class="product-grid" id="productGrid"><!-- injected by JS --></div>
+</section>
+
+<!-- Features -->
+<section class="features">
+  <div class="feature">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/></svg>
+    <div><strong>100% Authentic</strong><span>Genuine &amp; Quality Products</span></div>
+  </div>
+  <div class="feature">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="7" width="14" height="10"/><path d="M15 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg>
+    <div><strong>Fast Nationwide Delivery</strong><span>Lagos &amp; Across Nigeria</span></div>
+  </div>
+  <div class="feature">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+    <div><strong>Secure Payments</strong><span>Multiple Payment Options</span></div>
+  </div>
+  <div class="feature">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3z"/><path d="M3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg>
+    <div><strong>Dedicated Support</strong><span>We're Here to Help</span></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer" id="contact">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 60 60" width="42" height="42">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="30" y="39" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="26" fill="currentColor">EF</text>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>EXCEL <em>FABRIK</em></strong>
+        <small>— Jewelries &amp; Accessories —</small>
+      </span>
+    </div>
+
+    <div class="footer-col" id="about">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Shop By Category</h4>
+      <a href="#top-picks">Necklaces</a>
+      <a href="#top-picks">Bracelets</a>
+      <a href="#top-picks">Rings</a>
+      <a href="#top-picks">Earrings</a>
+      <a href="#top-picks">Accessories</a>
+    </div>
+
+    <div class="footer-col footer-news">
+      <h4>Join Our Newsletter</h4>
+      <p>Be the first to know about new arrivals, special offers and more.</p>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" aria-label="Subscribe">→</button>
+      </form>
+      <p class="news-msg" id="newsMsg"></p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="TikTok">TT</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Excel Fabrik. All rights reserved.</span>
+    <span class="tagline">Elegance in Every Detail ✦</span>
+  </div>
+</footer>
+
+<!-- Cart drawer -->
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <h3>Your Cart</h3>
+    <button id="closeCart" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Your cart is empty.</p>
+  </div>
+  <div class="cart-total-row">
+    <div class="cart-total-amount">
+      <span>Total</span>
+      <strong id="cartTotal">₦0</strong>
+    </div>
+    <button class="order-whatsapp" id="orderWhatsapp" type="button" disabled>
+      Order on WhatsApp
+    </button>
+  </div>
+</aside>
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

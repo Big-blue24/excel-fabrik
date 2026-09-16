@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections | Excel Fabrik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="collections-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html#hero">Home</a>
+        <a href="shop.html#shop">Shop</a>
+        <a href="collections.html" class="active">Collections</a>
+      </nav>
+      <a href="index.html#hero" class="brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 60 60" width="46" height="46" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="30" y="39" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="26" fill="currentColor">EF</text></svg>
+        </span>
+        <span class="brand-text"><strong>EXCEL <em>FABRIK</em></strong><small>— Jewelries &amp; Accessories —</small></span>
+      </a>
+      <nav class="main-nav main-nav-right"><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
+      <div class="header-icons">
+        <a href="shop.html#shop" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></a>
+        <a href="index.html#contact" aria-label="Account"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></a>
+        <a href="shop.html#shop" aria-label="Cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="collections-intro">
+      <p class="eyebrow-line">— Curated for Every Chapter</p>
+      <h1>Collections with<br><em>something to say.</em></h1>
+      <p>Explore our edit of considered pieces, from everyday gold to statement accessories made for the moments that deserve a little more shine.</p>
+    </section>
+
+    <section class="collection-list" aria-label="Jewelry collections">
+      <a class="collection-feature collection-feature-wide" href="shop.html#shop"><img src="neckleace/16.jpeg" alt="Necklace collection"><span class="collection-overlay"><small>01 / The Signature Edit</small><strong>Necklaces</strong><span>Explore pieces <b>→</b></span></span></a>
+      <a class="collection-feature" href="shop.html#shop"><img src="bango/1.jpeg" alt="Bracelet collection"><span class="collection-overlay"><small>02 / Made to Layer</small><strong>Bracelets</strong><span>Explore pieces <b>→</b></span></span></a>
+      <a class="collection-feature" href="shop.html#shop"><img src="rings/1.jpeg" alt="Ring collection"><span class="collection-overlay"><small>03 / Little Luxuries</small><strong>Rings</strong><span>Explore pieces <b>→</b></span></span></a>
+      <a class="collection-feature" href="shop.html#shop"><img src="earrings/21.jpeg" alt="Earring collection"><span class="collection-overlay"><small>04 / A Luminous Finish</small><strong>Earrings</strong><span>Explore pieces <b>→</b></span></span></a>
+      <a class="collection-feature collection-feature-wide" href="shop.html#shop"><img src="native/23.jpeg" alt="Accessories collection"><span class="collection-overlay"><small>05 / Complete the Look</small><strong>Accessories</strong><span>Explore pieces <b>→</b></span></span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer collections-footer"><div class="footer-bottom"><span>© 2026 Excel Fabrik. All rights reserved.</span><span class="tagline">Elegance in Every Detail ✦</span></div></footer>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => mainNav.classList.toggle('mobile-open'));
+  </script>
+</body>
+</html>

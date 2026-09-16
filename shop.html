@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+  <title>Shop - Excel Fabrik</title>
+</head>
+<body class="shop-page">
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html#home" class="active">Home</a>
+      <a href="shop.html#shop">Shop</a>
+      <a href="collections.html" id="collectionsLink">Collections</a>
+    </nav>
+
+    <a href="index.html#hero" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 60 60" width="46" height="46">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="30" y="39" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="26" fill="currentColor">EF</text>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>EXCEL <em>FABRIK</em></strong>
+        <small>— Jewelries &amp; Accessories —</small>
+      </span>
+    </a>
+
+    <nav class="main-nav main-nav-right">
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-icons">
+      <button aria-label="Search" id="searchBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button aria-label="Account">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      </button>
+      <button aria-label="Cart" id="cartBtn" class="cart-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="page-head">
+  <div>
+    <div class="crumb">Home / <span>Shop</span></div>
+    <h1>The Full Collection</h1>
+    <p>Every piece, in one place — necklaces, bracelets, rings, earrings and the accessories built to complete them.</p>
+  </div>
+  <div class="result-count">128 pieces</div>
+</div>
+
+<div class="shop-body">
+
+  <aside class="filters">
+    <div class="filter-block">
+      <div class="filter-title">Category <span class="chev">&#9662;</span></div>
+      <div class="filter-row checked"><span><span class="box"></span>All Jewelry</span> <span class="count">128</span></div>
+      <div class="filter-row"><span><span class="box"></span>Necklaces</span> <span class="count">34</span></div>
+      <div class="filter-row"><span><span class="box"></span>Bracelets</span> <span class="count">21</span></div>
+      <div class="filter-row"><span><span class="box"></span>Rings</span> <span class="count">28</span></div>
+      <div class="filter-row"><span><span class="box"></span>Earrings</span> <span class="count">30</span></div>
+      <div class="filter-row"><span><span class="box"></span>Accessories</span> <span class="count">15</span></div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-title">Price <span class="chev">&#9662;</span></div>
+      <div class="price-inputs">
+        <label for="priceMin">Minimum <strong id="priceMinValue">$40</strong></label>
+        <input id="priceMin" type="range" min="40" max="950" step="5" value="40">
+        <label for="priceMax">Maximum <strong id="priceMaxValue">$950</strong></label>
+        <input id="priceMax" type="range" min="40" max="950" step="5" value="950">
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-title">Material <span class="chev">&#9662;</span></div>
+      <div class="filter-row checked"><span><span class="box"></span>Gold Vermeil</span> <span class="count">52</span></div>
+      <div class="filter-row"><span><span class="box"></span>Sterling Silver</span> <span class="count">40</span></div>
+      <div class="filter-row"><span><span class="box"></span>Rose Gold</span> <span class="count">18</span></div>
+      <div class="filter-row"><span><span class="box"></span>Pavé Crystal</span> <span class="count">18</span></div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-title">Tone <span class="chev">&#9662;</span></div>
+      <div class="swatches">
+        <span class="swatch ring tone-gold"></span>
+        <span class="swatch tone-peach"></span>
+        <span class="swatch tone-silver"></span>
+        <span class="swatch tone-burgundy"></span>
+        <span class="swatch tone-cream"></span>
+      </div>
+    </div>
+
+    <a class="clear-filters" href="#">Clear all filters</a>
+  </aside>
+
+  <main class="shop-main">
+    <div class="toolbar">
+      <div class="chips">
+        <span class="chip active">All</span>
+        <span class="chip">New In</span>
+        <span class="chip">Best Sellers</span>
+        <span class="chip">Bridal</span>
+        <span class="chip">Gifting</span>
+      </div>
+      <div class="sort">Sort by: Featured <span>&#9662;</span></div>
+    </div>
+    <div class="search-panel" id="shopSearchPanel">
+      <input id="shopSearchInput" type="search" placeholder="Search the collection" aria-label="Search the collection">
+    </div>
+
+    <div class="grid">
+
+      <div class="product">
+        <div class="thumb product-art-1">
+          <svg viewBox="0 0 120 120" width="46%" height="46%" fill="none"><path d="M60 20 L75 45 L60 100 L45 45 Z" fill="#EADBB0"/><circle cx="60" cy="42" r="9" fill="#F5E9C8"/></svg>
+        </div>
+        <div class="badge">New</div>
+        <div class="wish">&#9825;</div>
+        <div class="quick-add">Quick Add</div>
+        <div class="meta">
+          <div>
+            <div class="cat">Necklaces</div>
+            <h3>Clover Pendant Chain</h3>
+            <div class="swatch-mini"><span class="tone-gold"></span><span class="tone-silver"></span></div>
+          </div>
+          <div class="price">$185</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="thumb product-art-2">
+          <svg viewBox="0 0 120 120" width="60%" height="60%" fill="none"><ellipse cx="60" cy="60" rx="42" ry="16" fill="none" stroke="#D9C79B" stroke-width="6"/><circle cx="60" cy="44" r="7" fill="#EADBB0"/></svg>
+        </div>
+        <div class="wish">&#9825;</div>
+        <div class="quick-add">Quick Add</div>
+        <div class="meta">
+          <div>
+            <div class="cat">Bracelets</div>
+            <h3>Cartier-Link Bangle</h3>
+            <div class="swatch-mini"><span class="tone-gold"></span></div>
+          </div>
+          <div class="price">$240</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="thumb product-art-3">
+          <svg viewBox="0 0 120 120" width="52%" height="52%" fill="none"><circle cx="60" cy="60" r="30" fill="none" stroke="#7B1E3C" stroke-width="8"/><circle cx="60" cy="60" r="9" fill="#7B1E3C"/></svg>
+        </div>
+        <div class="badge">Bestseller</div>
+        <div class="wish">&#9825;</div>
+        <div class="quick-add">Quick Add</div>
+        <div class="meta">
+          <div>
+            <div class="cat">Rings</div>
+            <h3>Solitaire Halo Ring</h3>
+            <div class="swatch-mini"><span class="tone-silver"></span><span class="tone-gold"></span></div>
+          </div>
+          <div class="price">$310</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="thumb product-art-4">
+          <svg viewBox="0 0 120 120" width="40%" height="40%" fill="none"><path d="M60 30 L78 60 L60 90 L42 60 Z" fill="#F5E9C8"/></svg>
+        </div>
+        <div class="wish">&#9825;</div>
+        <div class="quick-add">Quick Add</div>
+        <div class="meta">
+          <div>
+            <div class="cat">Earrings</div>
+            <h3>Clover Stud Pair</h3>
+            <div class="swatch-mini"><span class="tone-gold"></span></div>
+          </div>
+          <div class="price">$95</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="thumb product-art-5">
+          <svg viewBox="0 0 120 120" width="55%" height="55%" fill="none"><rect x="30" y="45" width="60" height="42" rx="6" fill="#4A1428" stroke="#D9C79B" stroke-width="2"/><path d="M45 45 V35 a15 15 0 0 1 30 0 V45" fill="none" stroke="#D9C79B" stroke-width="4"/></svg>
+        </div>
+        <div class="badge">New</div>
+        <div class="wish">&#9825;</div>
+        <div class="quick-add">Quick Add</div>
+        <div class="meta">
+          <div>
+            <div class="cat">Accessories</div>
+            <h3>Velvet Structured Bag</h3>
+            <div class="swatch-mini"><span class="tone-burgundy"></span><span class="tone-brown"></span></div>
+          </div>
+          <div class="price">$420</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="thumb product-art-6">
+          <svg viewBox="0 0 120 120" width="66%" height="66%" fill="none"><path d="M20 60 Q40 30 60 60 T100 60" stroke="#7B1E3C" stroke-width="6" fill="none"/><circle cx="60" cy="60" r="6" fill="#7B1E3C"/></svg>
+        </div>
+        <div class="wish">&#9825;</div>
+        <div class="quick-add">Quick Add</div>
+        <div class="meta">
+          <div>
+            <div class="cat">Necklaces</div>
+            <h3>Layered Chain Set</h3>
+            <div class="swatch-mini"><span class="tone-gold"></span><span class="tone-silver"></span></div>
+          </div>
+          <div class="price">$205</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="thumb product-art-2">
+          <svg viewBox="0 0 120 120" width="56%" height="56%" fill="none"><path d="M30 60 Q60 30 90 60 Q60 90 30 60 Z" fill="none" stroke="#EADBB0" stroke-width="5"/></svg>
+        </div>
+        <div class="badge">Bestseller</div>
+        <div class="wish">&#9825;</div>
+        <div class="quick-add">Quick Add</div>
+        <div class="meta">
+          <div>
+            <div class="cat">Bracelets</div>
+            <h3>Woven Gold Cuff</h3>
+            <div class="swatch-mini"><span class="tone-gold"></span></div>
+          </div>
+          <div class="price">$275</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="thumb product-art-4">
+          <svg viewBox="0 0 120 120" width="42%" height="42%" fill="none"><circle cx="60" cy="60" r="26" fill="none" stroke="#F5E9C8" stroke-width="7"/></svg>
+        </div>
+        <div class="wish">&#9825;</div>
+        <div class="quick-add">Quick Add</div>
+        <div class="meta">
+          <div>
+            <div class="cat">Rings</div>
+            <h3>Stacking Band Trio</h3>
+            <div class="swatch-mini"><span class="tone-gold"></span><span class="tone-burgundy"></span></div>
+          </div>
+          <div class="price">$150</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="thumb product-art-3">
+          <svg viewBox="0 0 120 120" width="48%" height="48%" fill="none"><path d="M60 25 L70 50 L60 95 L50 50 Z" fill="#7B1E3C"/><circle cx="60" cy="46" r="8" fill="#7B1E3C"/></svg>
+        </div>
+        <div class="wish">&#9825;</div>
+        <div class="quick-add">Quick Add</div>
+        <div class="meta">
+          <div>
+            <div class="cat">Earrings</div>
+            <h3>Drop Pendant Hoops</h3>
+            <div class="swatch-mini"><span class="tone-gold"></span><span class="tone-brown"></span></div>
+          </div>
+          <div class="price">$120</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+</div>
+
+<aside class="cart-panel" id="shopCartPanel" aria-label="Shopping cart" aria-hidden="true">
+  <div class="cart-panel-head">
+    <h2>Your Cart</h2>
+    <button class="cart-close" id="shopCartClose" type="button" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-list" id="shopCartList">Your cart is empty.</div>
+  <div class="cart-total"><span>Total</span><strong id="shopCartTotal">$0</strong></div>
+</aside>
+<div class="cart-overlay" id="shopCartOverlay"></div>
+
+</body>
+<script>
+  const products = [...document.querySelectorAll('.product')];
+  const resultCount = document.querySelector('.result-count');
+  const categoryRows = [...document.querySelectorAll('.filter-block:first-child .filter-row')];
+  const chips = [...document.querySelectorAll('.chip')];
+  const selectedFilters = new Set();
+  const cart = new Map();
+  const searchButton = document.getElementById('searchBtn');
+  const searchPanel = document.getElementById('shopSearchPanel');
+  const searchInput = document.getElementById('shopSearchInput');
+  const cartPanel = document.getElementById('shopCartPanel');
+  const cartList = document.getElementById('shopCartList');
+  const cartTotal = document.getElementById('shopCartTotal');
+  const cartOverlay = document.getElementById('shopCartOverlay');
+  const cartButton = document.getElementById('cartBtn');
+  const priceMin = document.getElementById('priceMin');
+  const priceMax = document.getElementById('priceMax');
+  const priceMinValue = document.getElementById('priceMinValue');
+  const priceMaxValue = document.getElementById('priceMaxValue');
+  const pagination = document.getElementById('pagination');
+  const pageSize = 6;
+  let currentPage = 1;
+
+  function openCart() {
+    cartPanel.classList.add('open');
+    cartOverlay.classList.add('open');
+    cartPanel.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeCart() {
+    cartPanel.classList.remove('open');
+    cartOverlay.classList.remove('open');
+    cartPanel.setAttribute('aria-hidden', 'true');
+  }
+
+  function renderCart() {
+    document.getElementById('cartCount').textContent = [...cart.values()].reduce((sum, quantity) => sum + quantity, 0);
+    if (!cart.size) {
+      cartList.textContent = 'Your cart is empty.';
+      cartTotal.textContent = '$0';
+      return;
+    }
+    let total = 0;
+    cartList.innerHTML = [...cart.entries()].map(([product, quantity]) => {
+      const price = Number(product.querySelector('.price').textContent.replace(/[^\d.]/g, ''));
+      total += price * quantity;
+      return `<div class="cart-line"><span>${product.querySelector('h3').textContent} x${quantity}</span><strong>$${(price * quantity).toFixed(2)}</strong></div>`;
+    }).join('');
+    cartTotal.textContent = `$${total.toFixed(2)}`;
+  }
+
+  searchButton.addEventListener('click', () => {
+    searchPanel.classList.toggle('open');
+    if (searchPanel.classList.contains('open')) searchInput.focus();
+  });
+  searchInput.addEventListener('input', () => {
+    updateProducts(true);
+  });
+  cartButton.addEventListener('click', openCart);
+  document.getElementById('shopCartClose').addEventListener('click', closeCart);
+  cartOverlay.addEventListener('click', closeCart);
+
+  function renderPagination(pageCount) {
+    pagination.innerHTML = '';
+    const previous = document.createElement('button');
+    previous.type = 'button';
+    previous.innerHTML = '&#8592;';
+    previous.disabled = currentPage === 1;
+    previous.setAttribute('aria-label', 'Previous page');
+    previous.addEventListener('click', () => { currentPage -= 1; updateProducts(); });
+    pagination.appendChild(previous);
+
+    for (let page = 1; page <= pageCount; page += 1) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = page;
+      button.className = `num${page === currentPage ? ' active' : ''}`;
+      button.setAttribute('aria-label', `Page ${page}`);
+      button.setAttribute('aria-current', page === currentPage ? 'page' : 'false');
+      button.addEventListener('click', () => { currentPage = page; updateProducts(); });
+      pagination.appendChild(button);
+    }
+
+    const next = document.createElement('button');
+    next.type = 'button';
+    next.innerHTML = '&#8594;';
+    next.disabled = currentPage === pageCount;
+    next.setAttribute('aria-label', 'Next page');
+    next.addEventListener('click', () => { currentPage += 1; updateProducts(); });
+    pagination.appendChild(next);
+  }
+
+  function updateProducts(resetPage = false) {
+    if (resetPage) currentPage = 1;
+    const category = categoryRows.find(row => row.classList.contains('checked'))?.textContent.trim().split(/\s+/)[0];
+    const activeChip = document.querySelector('.chip.active')?.textContent.trim();
+    const query = searchInput.value.trim().toLowerCase();
+    const minimumPrice = Number(priceMin.value);
+    const maximumPrice = Number(priceMax.value);
+    const matchingProducts = [];
+
+    if (minimumPrice > maximumPrice) priceMax.value = minimumPrice;
+
+    products.forEach(product => {
+      const productCategory = product.querySelector('.cat')?.textContent.trim();
+      const productPrice = Number(product.querySelector('.price').textContent.replace(/[^\d.]/g, ''));
+      const isCategoryMatch = !category || category === 'All' || category === 'All Jewelry' || productCategory === category;
+      const isChipMatch = !activeChip || activeChip === 'All' ||
+        (activeChip === 'New In' && product.querySelector('.badge')?.textContent.trim() === 'New') ||
+        (activeChip === 'Best Sellers' && product.querySelector('.badge')?.textContent.trim() === 'Bestseller') ||
+        (activeChip === 'Bridal' && productCategory === 'Rings') ||
+        (activeChip === 'Gifting' && productCategory === 'Accessories');
+      const isSearchMatch = !query || product.textContent.toLowerCase().includes(query);
+      const isPriceMatch = productPrice >= Number(priceMin.value) && productPrice <= Number(priceMax.value);
+
+      if (isCategoryMatch && isChipMatch && isSearchMatch && isPriceMatch) matchingProducts.push(product);
+    });
+
+    const pageCount = Math.max(1, Math.ceil(matchingProducts.length / pageSize));
+    currentPage = Math.min(currentPage, pageCount);
+    const firstVisible = (currentPage - 1) * pageSize;
+    products.forEach(product => {
+      product.hidden = !matchingProducts.includes(product) || !matchingProducts.slice(firstVisible, firstVisible + pageSize).includes(product);
+    });
+
+    priceMinValue.textContent = `$${priceMin.value}`;
+    priceMaxValue.textContent = `$${priceMax.value}`;
+    resultCount.textContent = `${matchingProducts.length} pieces`;
+    renderPagination(pageCount);
+  }
+
+  [priceMin, priceMax].forEach(input => input.addEventListener('input', updateProducts));
+
+  categoryRows.forEach(row => row.addEventListener('click', () => {
+    categoryRows.forEach(item => item.classList.remove('checked'));
+    row.classList.add('checked');
+    updateProducts(true);
+  }));
+
+  document.querySelectorAll('.filter-block:nth-child(3) .filter-row').forEach(row => {
+    row.addEventListener('click', () => row.classList.toggle('checked'));
+  });
+
+  document.querySelectorAll('.swatch').forEach(swatch => {
+    swatch.addEventListener('click', () => swatch.classList.toggle('ring'));
+  });
+
+  chips.forEach(chip => chip.addEventListener('click', () => {
+    chips.forEach(item => item.classList.remove('active'));
+    chip.classList.add('active');
+    updateProducts(true);
+  }));
+
+  document.querySelectorAll('.wish').forEach(button => {
+    button.setAttribute('role', 'button');
+    button.setAttribute('aria-label', 'Add to wishlist');
+    button.addEventListener('click', () => {
+      button.classList.toggle('selected');
+      button.textContent = button.classList.contains('selected') ? '\u2665' : '\u2661';
+    });
+  });
+
+  document.querySelectorAll('.quick-add').forEach(button => {
+    button.setAttribute('role', 'button');
+    button.addEventListener('click', () => {
+      const product = button.closest('.product');
+      cart.set(product, (cart.get(product) || 0) + 1);
+      renderCart();
+      button.textContent = 'Added';
+      button.classList.add('added');
+      setTimeout(() => {
+        button.textContent = 'Quick Add';
+        button.classList.remove('added');
+      }, 1200);
+      openCart();
+    });
+  });
+
+  document.querySelector('.clear-filters').addEventListener('click', event => {
+    event.preventDefault();
+    categoryRows.forEach(row => row.classList.toggle('checked', row.textContent.includes('All Jewelry')));
+    document.querySelectorAll('.filter-row, .swatch').forEach(control => control.classList.remove('checked', 'ring'));
+    categoryRows[0].classList.add('checked');
+    priceMin.value = 40;
+    priceMax.value = 950;
+    chips.forEach(chip => chip.classList.toggle('active', chip.textContent.trim() === 'All'));
+    updateProducts(true);
+  });
+
+  const sortControl = document.querySelector('.sort');
+  sortControl.addEventListener('click', () => {
+    const ascending = sortControl.dataset.order !== 'ascending';
+    sortControl.dataset.order = ascending ? 'ascending' : 'descending';
+    sortControl.innerHTML = `Sort by: Price ${ascending ? 'low to high' : 'high to low'} <span>&#9662;</span>`;
+    const grid = document.querySelector('.grid');
+    products.sort((a, b) => {
+      const price = product => Number(product.querySelector('.price').textContent.replace(/[^\d]/g, ''));
+      return (price(a) - price(b)) * (ascending ? 1 : -1);
+    }).forEach(product => grid.appendChild(product));
+  });
+
+  updateProducts();
+</script>
+</html>
